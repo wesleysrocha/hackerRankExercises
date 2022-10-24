@@ -1,31 +1,23 @@
-﻿//exercicio 1
-using System;
+﻿using System;
 using static System.Console;
 
 class Solution
 {
-    static void Main(String[] args)
+    static void Main()
     {
-        var positive = 0;
-        var negative = 0;
-        var zero = 0;
-        ReadLine();
-        var arr_temp = ReadLine().Split(' ');
-        var arr = Array.ConvertAll(arr_temp, Int32.Parse);
 
-        for (int arr_i = 0; arr_i < arr.Length; arr_i++)
+        ulong num = ulong.Parse(Console.ReadLine());
+
+        for (int i = 61; i >= 0; i--)
         {
-            if (arr[arr_i] > 0)
-                ++positive;
-            else if (arr[arr_i] < 0)
-                ++negative;
-            else
-                ++zero;
+            ulong threeeBits = (num >> i) & 7;//USING 7 BECAUSE IT IS 111
+            if (threeeBits == 0 || threeeBits == 7)
+            {
+                num = num ^ (ulong)7 << i;
+                i -= 2;
+            }
         }
-
-        WriteLine((double)positive / arr.Length);
-        WriteLine((double)negative / arr.Length);
-        WriteLine((double)zero / arr.Length);
+        Console.WriteLine(num);
     }
 }
 

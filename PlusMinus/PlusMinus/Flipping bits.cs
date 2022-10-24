@@ -12,16 +12,18 @@ using System.Text.RegularExpressions;
 using System.Text;
 using System;
 
-/*class Result
+class Result
 {
-    public static string timeConversion(string s)
+
+    /*
+     * Complete the 'flippingBits' function below.
+     *
+     * The function is expected to return a LONG_INTEGER.
+     * The function accepts LONG_INTEGER n as parameter.
+     */
+
+    /*public static long flippingBits(long n)
     {
-        bool conversion = DateTime.TryParse(s, out DateTime time);
-        if (conversion)
-        {
-            return time.ToString("HH:mm:ss");
-        }
-        return "Input incorreto";
 
     }
 
@@ -33,14 +35,18 @@ class Solution
     {
         TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
-        string s = Console.ReadLine();
+        int q = Convert.ToInt32(Console.ReadLine().Trim());
 
-        string result = Result.timeConversion(s);
+        for (int qItr = 0; qItr < q; qItr++)
+        {
+            long n = Convert.ToInt64(Console.ReadLine().Trim());
 
-        textWriter.WriteLine(result);
+            long result = Result.flippingBits(n);
+
+            textWriter.WriteLine(result);
+        }
 
         textWriter.Flush();
         textWriter.Close();
-    }
+    }*/
 }
-*/

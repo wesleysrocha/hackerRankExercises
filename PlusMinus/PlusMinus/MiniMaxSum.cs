@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 using System.Text;
 using System;
 
-class Result
+/*class Result
 {
 
     /*
@@ -21,7 +21,7 @@ class Result
      * The function accepts INTEGER_ARRAY arr as parameter.
      */
 
-    public static void miniMaxSum(List<int> arr)
+    /*public static void miniMaxSum(List<int> arr)
     {
         long max = arr[0];
         long min = arr[0];
@@ -53,5 +53,6 @@ class Solution
 
         Result.miniMaxSum(arr);
     }
-}
+}*/
+
 
